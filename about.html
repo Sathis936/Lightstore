@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | LUMIÈRE & CO.</title>
+  <meta name="description" content="Discover the design philosophy, craftsmanship, and people behind LUMIÈRE & CO. luxury architectural lighting." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' fill='none'><path d='M18 3V8M11 8H25M8 12C8 17 12.5 21 18 21C23.5 21 28 17 28 12M13 21V25C13 27.2 15.2 29 18 29C20.8 29 23 27.2 23 25V21M18 29V33' stroke='%23c5a059' stroke-width='2.2' stroke-linecap='round'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: { 300: '#ebd27b', 400: '#dfc282', 500: '#c5a059', 600: '#a3823d', 700: '#806429' },
+            stone: { 850: '#1f1d1a', 950: '#0e0d0c' }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-[#faf9f5] text-stone-900 antialiased selection:bg-amber-200 selection:text-stone-900">
+  <header class="sticky top-0 z-50 lux-navbar">
+    <div class="lux-container flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 text-left group shrink-0">
+        <svg class="w-8 h-8 text-amber-600 dark:text-amber-400 shrink-0" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M18 3V8M11 8H25M8 12C8 17 12.5 21 18 21C23.5 21 28 17 28 12M13 21V25C13 27.2 15.2 29 18 29C20.8 29 23 27.2 23 25V21M18 29V33" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <circle cx="18" cy="3" r="1.5" fill="currentColor" /><circle cx="8" cy="12" r="1.5" fill="currentColor" /><circle cx="28" cy="12" r="1.5" fill="currentColor" /><circle cx="18" cy="33" r="1.5" fill="currentColor" />
+        </svg>
+        <span class="font-serif text-2xl sm:text-3xl font-medium tracking-tight text-stone-900 dark:text-stone-100">LUMIÈRE <span class="text-amber-600 font-light">&</span> CO.</span>
+      </a>
+      <nav class="hidden xl:flex items-center space-x-0.5" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active" aria-current="page">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="guide.html" class="nav-link">Lighting Guide</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <!-- RTL Button & Theme Toggle Button right after Contact -->
+        <div class="flex items-center gap-2 ml-2 pl-2 border-l border-stone-300 dark:border-stone-700">
+          <button class="rtl-toggle-btn nav-control-btn" title="Toggle RTL / LTR Layout">
+            <i class="fa-solid fa-right-left text-[11px]"></i>
+            <span class="rtl-btn-text">RTL</span>
+          </button>
+          <button class="theme-toggle-btn nav-control-btn w-9 h-9 !p-0" title="Toggle Light / Dark Theme">
+            <i class="fa-solid fa-moon text-xs"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Action Utilities with Proper Spacing -->
+      <div class="flex items-center gap-3 shrink-0">
+        <!-- Quotation Drawer Trigger -->
+        <button class="quote-drawer-trigger relative w-10 h-10 rounded-full border border-stone-200 dark:border-stone-700 hover:border-amber-400 text-stone-700 dark:text-stone-200 hover:text-amber-700 flex items-center justify-center transition" title="View Quotation Request" aria-label="View Quotation Request">
+          <i class="fa-solid fa-file-invoice text-sm"></i>
+          <span class="quote-count-badge absolute -top-1 -right-1 bg-amber-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center hidden">0</span>
+        </button>
+
+        <!-- CTA: Book Showroom -->
+        <a href="contact.html" class="hidden sm:inline-flex gold-glow-btn text-xs uppercase tracking-wider font-semibold py-2.5 px-4 rounded-lg items-center gap-2">
+          <i class="fa-solid fa-calendar-check"></i> Book Showroom
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button id="mobile-menu-toggle" class="xl:hidden w-10 h-10 rounded-lg border border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-200 flex items-center justify-center" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden xl:hidden">
+    <div class="absolute right-0 top-0 bottom-0 w-80 max-w-full bg-white dark:bg-stone-900 p-6 shadow-2xl flex flex-col">
+      <div class="flex items-center justify-between pb-6 border-b border-stone-200 dark:border-stone-800">
+        <span class="font-serif text-xl font-medium text-stone-900 dark:text-stone-100">LUMIÈRE & CO.</span>
+        <button id="mobile-menu-close" class="text-stone-400 hover:text-stone-800 text-xl p-2" aria-label="Close navigation"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <nav class="flex flex-col gap-1.5 mt-6" aria-label="Mobile navigation">
+        <a href="index.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">Home</a>
+        <a href="about.html" class="p-2.5 text-xs font-semibold text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-stone-800 rounded-lg" aria-current="page">About Us</a>
+        <a href="products.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">Products</a>
+        <a href="services.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">Services</a>
+        <a href="guide.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">Lighting Guide</a>
+        <a href="blog.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">Blog</a>
+        <a href="contact.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2 pt-4 mt-4 border-t border-stone-200 dark:border-stone-800">
+        <button class="rtl-toggle-btn nav-control-btn flex-1 py-2" title="Toggle RTL / LTR"><i class="fa-solid fa-right-left text-xs"></i><span class="rtl-btn-text">RTL Layout</span></button>
+        <button class="theme-toggle-btn nav-control-btn flex-1 py-2" title="Toggle Dark Theme"><i class="fa-solid fa-moon text-xs"></i><span>Atmosphere</span></button>
+      </div>
+    </div>
+  </div>
+
+  <section class="page-hero-unified" style="background-image: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1920&q=80');">
+    <div class="lux-container">
+      <div class="page-hero-content">
+        <span class="page-hero-badge"><i class="fa-solid fa-crown text-amber-400"></i> Our Atelier & Philosophy</span>
+        <h1 class="page-hero-title">Light, Crafted to Make a Lasting Impression</h1>
+        <p class="page-hero-desc">We bring together thoughtful design, enduring materials, and meticulous craftsmanship to create lighting that makes a space feel unmistakably yours.</p>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="py-20 bg-[#faf9f5]">
+      <div class="lux-container grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="rounded-2xl overflow-hidden shadow-lg min-h-80">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Warmly illuminated contemporary interior with sculptural lighting" class="w-full h-full min-h-80 object-cover" />
+        </div>
+        <div>
+          <span class="text-xs uppercase tracking-widest text-amber-700 dark:text-amber-400 font-semibold">The LUMIÈRE & CO. Story</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-100 mt-2 mb-5">Designed with purpose. Made to be lived with.</h2>
+          <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed mb-4">We believe lighting is more than a finishing touch. It shapes how a room feels, brings architecture to life, and becomes part of the memories made there.</p>
+          <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed mb-7">Our atelier curates statement chandeliers and architectural fixtures with a focus on considered proportions, quality materials, and detail that rewards a closer look. We work with homeowners and design professionals to find the right piece for each space.</p>
+          <a href="products.html" class="gold-glow-btn inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold py-3 px-5 rounded-lg">Explore our collections <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white dark:bg-stone-900">
+      <div class="lux-container">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs uppercase tracking-widest text-amber-700 dark:text-amber-400 font-semibold">What Guides Us</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-100 mt-2">A considered approach to every detail</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <article class="lux-half-card group">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Carefully composed lighting in a contemporary interior" loading="lazy" />
+            </div>
+            <div class="card-body">
+              <div>
+                <h3 class="font-serif text-2xl font-medium text-stone-900 dark:text-stone-100 mb-2">Intentional Design</h3>
+                <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed">We consider scale, proportion, and the way light moves through a room, so every fixture feels connected to the architecture around it.</p>
+              </div>
+            </div>
+          </article>
+          <article class="lux-half-card group">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1543198126-a8ad8e47fb22?auto=format&fit=crop&w=800&q=80" alt="Hand-finished chandelier details" loading="lazy" />
+            </div>
+            <div class="card-body">
+              <div>
+                <h3 class="font-serif text-2xl font-medium text-stone-900 dark:text-stone-100 mb-2">Lasting Materials</h3>
+                <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed">We look for enduring construction, carefully selected finishes, and craftsmanship that makes a fixture a lasting part of the home.</p>
+              </div>
+            </div>
+          </article>
+          <article class="lux-half-card group">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Welcoming, thoughtfully lit living space" loading="lazy" />
+            </div>
+            <div class="card-body">
+              <div>
+                <h3 class="font-serif text-2xl font-medium text-stone-900 dark:text-stone-100 mb-2">Personal Guidance</h3>
+                <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed">From room measurements to finish selection, our team helps homeowners and design professionals make confident choices for each project.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-[#faf9f5]">
+      <div class="lux-container text-center">
+        <span class="text-xs uppercase tracking-widest text-amber-700 dark:text-amber-400 font-semibold">Begin a Conversation</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-100 mt-2 mb-4">Let’s find the right light for your space.</h2>
+        <p class="text-sm text-stone-500 dark:text-stone-400 max-w-xl mx-auto mb-7">Tell us about your project and our team will help you explore the possibilities.</p>
+        <a href="contact.html" class="gold-glow-btn inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold py-3.5 px-6 rounded-lg">Contact our team <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <div id="quote-drawer" class="lux-drawer">
+    <div id="quote-drawer-backdrop" class="lux-drawer-backdrop"></div>
+    <div class="lux-drawer-content">
+      <div class="p-5 border-b border-stone-200 dark:border-stone-800 flex items-center justify-between bg-stone-50 dark:bg-stone-900">
+        <div>
+          <h3 class="font-serif text-xl font-medium text-stone-900 dark:text-stone-100">Your Quotation Request</h3>
+          <p class="text-xs text-stone-500 dark:text-stone-400">Selected lighting fixtures for your project</p>
+        </div>
+        <button id="quote-drawer-close" class="text-stone-400 hover:text-stone-800 text-lg p-2" aria-label="Close quotation request"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="flex-1 overflow-y-auto p-5">
+        <div id="quote-drawer-items" class="space-y-1"></div>
+        <div id="quote-empty-state" class="py-16 text-center text-stone-400">
+          <i class="fa-solid fa-file-invoice text-4xl text-stone-300 dark:text-stone-600 mb-3"></i>
+          <h4 class="font-serif text-lg font-medium text-stone-700 dark:text-stone-300">Your Quotation List is Empty</h4>
+          <p class="text-xs text-stone-500 max-w-xs mx-auto mt-1 mb-4">Browse our statement fixtures and add pieces to prepare a project inquiry.</p>
+          <a href="products.html" onclick="closeQuoteDrawer()" class="gold-glow-btn text-xs uppercase tracking-wider font-semibold py-2.5 px-4 rounded-lg inline-block">Browse Collections</a>
+        </div>
+      </div>
+      <div id="quote-drawer-footer" class="p-5 border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-900">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs uppercase tracking-wider text-stone-500 dark:text-stone-400 font-semibold">Estimated Total Value:</span>
+          <span id="quote-subtotal" class="font-serif text-2xl font-semibold text-stone-900 dark:text-stone-100">₹0</span>
+        </div>
+        <a href="contact.html?type=quote" class="gold-glow-btn w-full block text-center py-3 rounded-lg text-xs uppercase tracking-wider font-semibold">Submit List For Formal Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-[#0e0d0c] text-stone-400 text-xs border-t border-stone-800 pt-16 pb-12">
+    <div class="lux-container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-stone-800">
+        <div class="lg:col-span-2">
+          <a href="index.html" class="inline-flex items-center gap-3 mb-3 group">
+            <svg class="w-8 h-8 text-amber-500 shrink-0 transition-transform group-hover:scale-105" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M18 3V8M11 8H25M8 12C8 17 12.5 21 18 21C23.5 21 28 17 28 12M13 21V25C13 27.2 15.2 29 18 29C20.8 29 23 27.2 23 25V21M18 29V33" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <circle cx="18" cy="3" r="1.5" fill="currentColor" /><circle cx="8" cy="12" r="1.5" fill="currentColor" /><circle cx="28" cy="12" r="1.5" fill="currentColor" /><circle cx="13" cy="25" r="1.2" fill="currentColor" /><circle cx="23" cy="25" r="1.2" fill="currentColor" /><circle cx="18" cy="33" r="1.5" fill="currentColor" />
+            </svg>
+            <span class="font-serif text-2xl font-medium tracking-tight text-stone-100 group-hover:text-amber-400 transition">LUMIÈRE <span class="text-amber-500 font-light">&</span> CO.</span>
+          </a>
+          <p class="text-stone-400 text-xs leading-relaxed max-w-sm mb-6">Haute Éclairage atelier crafting bespoke chandeliers, architectural pendants, and precision photometric lighting systems for fine private estates and hospitality.</p>
+          <div class="flex items-center gap-3 text-stone-300">
+            <a href="#" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition border border-stone-800" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition border border-stone-800" title="X (Twitter)" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition border border-stone-800" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition border border-stone-800" title="Pinterest" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition border border-stone-800" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-stone-200 font-semibold uppercase tracking-wider text-[11px] mb-4">Navigation</h4>
+          <ul class="space-y-2.5">
+            <li><a href="about.html" class="hover:text-amber-400 transition">About Us</a></li>
+            <li><a href="products.html" class="hover:text-amber-400 transition">Products By Room & Style</a></li>
+            <li><a href="services.html" class="hover:text-amber-400 transition">Bespoke Services</a></li>
+            <li><a href="guide.html" class="hover:text-amber-400 transition">Lighting Guide & Calculator</a></li>
+            <li><a href="blog.html" class="hover:text-amber-400 transition">Design Blog & Trends</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400 transition">Contact & Showrooms</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-stone-200 font-semibold uppercase tracking-wider text-[11px] mb-4">By Room & Style</h4>
+          <ul class="space-y-2.5">
+            <li><a href="products.html?room=foyer" class="hover:text-amber-400 transition">Grand Foyer Chandeliers</a></li>
+            <li><a href="products.html?room=dining" class="hover:text-amber-400 transition">Dining Room Linear Lights</a></li>
+            <li><a href="products.html?room=living" class="hover:text-amber-400 transition">Living Room Sculptures</a></li>
+            <li><a href="products.html?style=crystal" class="hover:text-amber-400 transition">Austrian Crystal Series</a></li>
+            <li><a href="products.html?style=alabaster" class="hover:text-amber-400 transition">Spanish Alabaster Series</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-stone-200 font-semibold uppercase tracking-wider text-[11px] mb-4">Flagship Galleries</h4>
+          <div class="space-y-3 text-stone-400">
+            <div><strong class="text-stone-200 block">New York Gallery:</strong><span>742 Madison Ave, New York, NY 10065</span></div>
+            <div><strong class="text-stone-200 block">Los Angeles Atelier:</strong><span>8900 Melrose Ave, West Hollywood, CA 90069</span></div>
+            <div class="pt-1"><span class="text-amber-400 font-medium block">Concierge Hours:</span><span>Mon-Sat: 9:00 AM – 7:00 PM EST</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 text-center text-stone-500 text-xs">© 2026 LUMIÈRE & CO. HAUTE ÉCLAIRAGE. All rights reserved.</div>
+    </div>
+  </footer>
+  <script src="js/products-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

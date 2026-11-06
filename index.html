@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUMIÈRE & CO. | Luxury Chandeliers & Architectural Statement Lighting</title>
+  <meta name="description" content="Handcrafted statement chandeliers, bespoke crystal fixtures, and architectural lighting consultation for luxury residences and hospitality." />
+  
+  <!-- Favicon / Logo in Browser Title -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' fill='none'><path d='M18 3V8M11 8H25M8 12C8 17 12.5 21 18 21C23.5 21 28 17 28 12M13 21V25C13 27.2 15.2 29 18 29C20.8 29 23 27.2 23 25V21M18 29V33' stroke='%23c5a059' stroke-width='2.2' stroke-linecap='round'/><circle cx='18' cy='3' r='1.5' fill='%23c5a059'/><circle cx='8' cy='12' r='1.5' fill='%23c5a059'/><circle cx='28' cy='12' r='1.5' fill='%23c5a059'/><circle cx='18' cy='33' r='1.5' fill='%23c5a059'/></svg>" />
+  
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              300: '#ebd27b',
+              400: '#dfc282',
+              500: '#c5a059',
+              600: '#a3823d',
+              700: '#806429'
+            },
+            stone: {
+              850: '#1f1d1a',
+              950: '#0e0d0c'
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Luxury Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-[#faf9f5] text-stone-900 antialiased selection:bg-amber-200 selection:text-stone-900">
+
+  <!-- MAIN NAVIGATION BAR (Top concierge bar removed as requested) -->
+  <header class="sticky top-0 z-50 lux-navbar">
+    <div class="lux-container flex items-center justify-between h-20">
+      
+      <!-- Logo with Brand Emblem SVG placed BEFORE Brand Name -->
+      <a href="index.html" class="flex items-center gap-3 text-left group shrink-0">
+        <svg class="w-8 h-8 text-amber-600 dark:text-amber-400 shrink-0 inline-block transition-transform duration-300 group-hover:scale-105" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 3V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M11 8H25" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M8 12C8 17 12.5 21 18 21C23.5 21 28 17 28 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          <path d="M13 21V25C13 27.2 15.2 29 18 29C20.8 29 23 27.2 23 25V21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          <path d="M18 29V33" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <circle cx="18" cy="3" r="1.5" fill="currentColor" />
+          <circle cx="8" cy="12" r="1.5" fill="currentColor" />
+          <circle cx="28" cy="12" r="1.5" fill="currentColor" />
+          <circle cx="13" cy="25" r="1.2" fill="currentColor" />
+          <circle cx="23" cy="25" r="1.2" fill="currentColor" />
+          <circle cx="18" cy="33" r="1.5" fill="currentColor" />
+        </svg>
+        <div class="flex flex-col justify-center">
+          <span class="font-serif text-2xl sm:text-3xl font-medium tracking-tight text-stone-900 dark:text-stone-100 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition leading-none">
+            LUMIÈRE <span class="text-amber-600 font-light">&</span> CO.
+          </span>
+          <span class="text-[9.5px] uppercase tracking-[0.2em] text-stone-500 dark:text-stone-400 font-semibold whitespace-nowrap mt-1 leading-none">
+            Haute Éclairage • Atelier
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links (With Home Dropdown & RTL + Theme Toggles after Contact) -->
+      <nav class="hidden xl:flex items-center space-x-0.5">
+        
+        <!-- Home Dropdown (Home 1 & Home 2) -->
+        <div class="relative group">
+          <button class="nav-link active flex items-center gap-1.5 focus:outline-none">
+            <span>Home</span>
+            <i class="fa-solid fa-chevron-down text-[10px] transition group-hover:rotate-180"></i>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-56 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-xl p-2 space-y-1">
+              <a href="index.html" class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-xs font-semibold text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-stone-800 transition">
+                <i class="fa-solid fa-crown text-amber-600 text-xs"></i>
+                <div>
+                  <div class="font-medium">Home 1 - Grand Atelier</div>
+                  <div class="text-[10px] text-stone-400 font-normal">Statement & Crystal</div>
+                </div>
+              </a>
+              <a href="home-2.html" class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-xs font-semibold text-stone-800 dark:text-stone-200 hover:bg-amber-50 dark:hover:bg-stone-800 hover:text-amber-700 transition">
+                <i class="fa-solid fa-cubes text-amber-600 text-xs"></i>
+                <div>
+                  <div class="font-medium">Home 2 - Modern Luxe</div>
+                  <div class="text-[10px] text-stone-400 font-normal">Architectural & Sculptural</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="guide.html" class="nav-link">Lighting Guide</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+
+        <!-- RTL Button & Theme Toggle Button right after Contact -->
+        <div class="flex items-center gap-2 ml-2 pl-2 border-l border-stone-300 dark:border-stone-700">
+          <button class="rtl-toggle-btn nav-control-btn" title="Toggle RTL / LTR Layout">
+            <i class="fa-solid fa-right-left text-[11px]"></i>
+            <span class="rtl-btn-text">RTL</span>
+          </button>
+          <button class="theme-toggle-btn nav-control-btn w-9 h-9 !p-0" title="Toggle Light / Dark Theme">
+            <i class="fa-solid fa-moon text-xs"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Action Utilities with Proper Spacing -->
+      <div class="flex items-center gap-3 shrink-0">
+        <!-- Quotation Drawer Trigger -->
+        <button class="quote-drawer-trigger relative w-10 h-10 rounded-full border border-stone-200 dark:border-stone-700 hover:border-amber-400 text-stone-700 dark:text-stone-200 hover:text-amber-700 flex items-center justify-center transition" title="View Quotation Request" aria-label="View Quotation Request">
+          <i class="fa-solid fa-file-invoice text-sm"></i>
+          <span class="quote-count-badge absolute -top-1 -right-1 bg-amber-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center hidden">0</span>
+        </button>
+
+        <!-- CTA: Book Showroom -->
+        <a href="contact.html" class="hidden sm:inline-flex gold-glow-btn text-xs uppercase tracking-wider font-semibold py-2.5 px-4 rounded-lg items-center gap-2">
+          <i class="fa-solid fa-calendar-check"></i> Book Showroom
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button id="mobile-menu-toggle" class="xl:hidden w-10 h-10 rounded-lg border border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-200 flex items-center justify-center" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden xl:hidden">
+    <div class="absolute right-0 top-0 bottom-0 w-80 bg-white dark:bg-stone-900 p-6 shadow-2xl flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-stone-200 dark:border-stone-800">
+          <div class="flex items-center gap-2">
+            <svg class="w-6 h-6 text-amber-600 dark:text-amber-400" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 3V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M11 8H25" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M8 12C8 17 12.5 21 18 21C23.5 21 28 17 28 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+            <div class="font-serif text-xl font-medium text-stone-900 dark:text-stone-100">LUMIÈRE & CO.</div>
+          </div>
+          <button id="mobile-menu-close" class="text-stone-400 hover:text-stone-800 text-xl p-2">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        
+        <!-- Mobile Links including Home 1 & Home 2 -->
+        <nav class="flex flex-col gap-1.5 mt-6">
+          <div class="p-2 bg-amber-50/60 dark:bg-stone-800/60 rounded-xl mb-1">
+            <span class="text-[10px] uppercase font-bold text-amber-700 dark:text-amber-400 px-2 block mb-1">Home Editions</span>
+            <a href="index.html" class="p-2 text-xs font-semibold text-amber-700 dark:text-amber-400 block rounded-lg bg-white dark:bg-stone-800">Home 1 - Grand Atelier</a>
+            <a href="home-2.html" class="p-2 text-xs font-medium text-stone-700 dark:text-stone-300 block hover:bg-white dark:hover:bg-stone-800 rounded-lg">Home 2 - Modern Luxe</a>
+          </div>
+          <a href="about.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">About Us</a>
+          <a href="products.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">Products By Room & Style</a>
+          <a href="services.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">Bespoke Services</a>
+          <a href="guide.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">Lighting Guide & Calculator</a>
+          <a href="blog.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">Design Blog & Trends</a>
+          <a href="contact.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">Contact & Showrooms</a>
+        </nav>
+
+        <!-- Mobile RTL & Theme Controls -->
+        <div class="flex items-center gap-2 pt-4 mt-4 border-t border-stone-200 dark:border-stone-800">
+          <button class="rtl-toggle-btn nav-control-btn flex-1 py-2" title="Toggle RTL / LTR">
+            <i class="fa-solid fa-right-left text-xs"></i>
+            <span class="rtl-btn-text">RTL Layout</span>
+          </button>
+          <button class="theme-toggle-btn nav-control-btn flex-1 py-2" title="Toggle Dark Theme">
+            <i class="fa-solid fa-moon text-xs"></i>
+            <span>Atmosphere</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-stone-200 dark:border-stone-800">
+        <div class="text-center text-xs text-stone-500">
+          Concierge: 1 (800) LUMIÈRE
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIFIED HERO SECTION (Consistent across all pages) -->
+  <section class="page-hero-unified" style="background-image: url('https://images.unsplash.com/photo-1543198126-a8ad8e47fb22?auto=format&fit=crop&w=1920&q=80');">
+    <div class="lux-container">
+      <div class="page-hero-content">
+        <span class="page-hero-badge">
+          <i class="fa-solid fa-crown text-amber-400"></i> Statement Lighting & Chandeliers
+        </span>
+        <h1 class="page-hero-title">
+          Illuminating Spaces With Timeless Grandeur
+        </h1>
+        <p class="page-hero-desc">
+          Handcrafted crystal chandeliers, sculptural linear pendants, and bespoke architectural illumination designed for visionary residences.
+        </p>
+        
+        <!-- Centered CTAs -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
+          <a href="products.html" class="gold-glow-btn text-xs sm:text-sm uppercase tracking-wider font-semibold py-3.5 px-7 rounded-xl flex items-center gap-2">
+            <span>Explore Collections</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+          <a href="contact.html" class="bg-white/10 hover:bg-white/20 border border-white/25 text-white text-xs sm:text-sm uppercase tracking-wider font-medium py-3.5 px-7 rounded-xl backdrop-blur-sm transition">
+            Book Showroom Visit
+          </a>
+        </div>
+
+        <!-- Trust Metrics -->
+        <div class="grid grid-cols-3 gap-6 sm:gap-12 mt-12 pt-8 border-t border-stone-700/60 text-stone-300 w-full max-w-xl">
+          <div class="text-center">
+            <span class="block font-serif text-2xl sm:text-3xl text-amber-400 font-semibold">4,800+</span>
+            <span class="text-[11px] sm:text-xs text-stone-400 tracking-wider uppercase">Luxury Homes</span>
+          </div>
+          <div class="text-center">
+            <span class="block font-serif text-2xl sm:text-3xl text-amber-400 font-semibold">30% PbO</span>
+            <span class="text-[11px] sm:text-xs text-stone-400 tracking-wider uppercase">Austrian Crystal</span>
+          </div>
+          <div class="text-center">
+            <span class="block font-serif text-2xl sm:text-3xl text-amber-400 font-semibold">10-Year</span>
+            <span class="text-[11px] sm:text-xs text-stone-400 tracking-wider uppercase">Structural Warranty</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STATEMENT LIGHTING SHOWCASE -->
+  <section class="py-20 bg-[#faf9f5]">
+    <div class="lux-container">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs uppercase tracking-widest text-amber-700 dark:text-amber-400 font-semibold">Masterwork Fixtures</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-100 mt-1">Featured Statement Pieces</h2>
+          <p class="text-stone-500 dark:text-stone-400 text-sm mt-2 max-w-xl">Curated chandeliers and sculptural pendants engineered to command double-height entries, grand living rooms, and formal dining tables.</p>
+        </div>
+        <div class="mt-4 md:mt-0">
+          <a href="products.html" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-stone-900 dark:text-stone-100 hover:text-amber-700 dark:hover:text-amber-400 transition">
+            View All 12 Collections <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 4 Showcase Products Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Showcase 1 -->
+        <div class="lux-card group flex flex-col justify-between">
+          <div>
+            <div class="lux-card-img-wrap h-72">
+              <img src="https://images.unsplash.com/photo-1543198126-a8ad8e47fb22?auto=format&fit=crop&w=800&q=80" alt="Aurelia Cascade Grand Chandelier" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full badge-gold">
+                Bestseller
+              </span>
+              <button onclick="openQuickView('prod-1')" class="absolute bottom-3 right-3 bg-white/90 dark:bg-stone-900/90 hover:bg-white text-stone-800 dark:text-stone-100 text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md transition opacity-0 group-hover:opacity-100 flex items-center gap-1.5">
+                <i class="fa-solid fa-eye text-amber-700 dark:text-amber-400"></i> Quick View
+              </button>
+            </div>
+            <div class="p-5">
+              <span class="text-xs text-amber-600 dark:text-amber-400 font-medium">Grand Foyer • Crystal</span>
+              <h3 class="font-serif text-lg font-medium text-stone-900 dark:text-stone-100 group-hover:text-amber-800 dark:group-hover:text-amber-400 transition mb-1">
+                Aurelia Cascade Grand Chandelier
+              </h3>
+              <p class="text-xs text-stone-500 dark:text-stone-400 line-clamp-2 mb-3">Cascading hand-cut crystal drops set in rich polished brass framework.</p>
+              <div class="text-[11px] text-stone-400 bg-stone-50 dark:bg-stone-800/60 px-2 py-1 rounded border border-stone-100 dark:border-stone-800">
+                48" Dia × 68" H • 24 Sockets
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0 border-t border-stone-100 dark:border-stone-800">
+            <div class="flex items-center justify-between py-3">
+              <span class="font-serif text-xl font-semibold text-stone-900 dark:text-stone-100">₹4,26,800</span>
+              <span class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">In Stock</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToQuote('prod-1')" class="gold-glow-btn py-2 px-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-file-lines"></i> Quote
+              </button>
+              <button onclick="openQuickView('prod-1')" class="gold-outline-btn py-2 px-3 rounded-lg text-xs font-semibold text-center">
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Showcase 2 -->
+        <div class="lux-card group flex flex-col justify-between">
+          <div>
+            <div class="lux-card-img-wrap h-72">
+              <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" alt="Vesper Linear Brass Dining Chandelier" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full badge-stone">
+                Architect's Pick
+              </span>
+              <button onclick="openQuickView('prod-2')" class="absolute bottom-3 right-3 bg-white/90 dark:bg-stone-900/90 hover:bg-white text-stone-800 dark:text-stone-100 text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md transition opacity-0 group-hover:opacity-100 flex items-center gap-1.5">
+                <i class="fa-solid fa-eye text-amber-700 dark:text-amber-400"></i> Quick View
+              </button>
+            </div>
+            <div class="p-5">
+              <span class="text-xs text-amber-600 dark:text-amber-400 font-medium">Dining Room • Modern</span>
+              <h3 class="font-serif text-lg font-medium text-stone-900 dark:text-stone-100 group-hover:text-amber-800 dark:group-hover:text-amber-400 transition mb-1">
+                Vesper Linear Brass Chandelier
+              </h3>
+              <p class="text-xs text-stone-500 dark:text-stone-400 line-clamp-2 mb-3">Architectural linear silhouette with hand-blown opaline glass globes.</p>
+              <div class="text-[11px] text-stone-400 bg-stone-50 dark:bg-stone-800/60 px-2 py-1 rounded border border-stone-100 dark:border-stone-800">
+                60" L × 14" W • Integrated 48W LED
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0 border-t border-stone-100 dark:border-stone-800">
+            <div class="flex items-center justify-between py-3">
+              <span class="font-serif text-xl font-semibold text-stone-900 dark:text-stone-100">₹2,19,120</span>
+              <span class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">Ready to Ship</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToQuote('prod-2')" class="gold-glow-btn py-2 px-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-file-lines"></i> Quote
+              </button>
+              <button onclick="openQuickView('prod-2')" class="gold-outline-btn py-2 px-3 rounded-lg text-xs font-semibold text-center">
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Showcase 3 -->
+        <div class="lux-card group flex flex-col justify-between">
+          <div>
+            <div class="lux-card-img-wrap h-72">
+              <img src="https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?auto=format&fit=crop&w=800&q=80" alt="Celestia Sculptural Halo Chandelier" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full badge-gold">
+                Design Award
+              </span>
+              <button onclick="openQuickView('prod-4')" class="absolute bottom-3 right-3 bg-white/90 dark:bg-stone-900/90 hover:bg-white text-stone-800 dark:text-stone-100 text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md transition opacity-0 group-hover:opacity-100 flex items-center gap-1.5">
+                <i class="fa-solid fa-eye text-amber-700 dark:text-amber-400"></i> Quick View
+              </button>
+            </div>
+            <div class="p-5">
+              <span class="text-xs text-amber-600 dark:text-amber-400 font-medium">Living Room • Modern</span>
+              <h3 class="font-serif text-lg font-medium text-stone-900 dark:text-stone-100 group-hover:text-amber-800 dark:group-hover:text-amber-400 transition mb-1">
+                Celestia Sculptural Halo Chandelier
+              </h3>
+              <p class="text-xs text-stone-500 dark:text-stone-400 line-clamp-2 mb-3">Concentric floating rings of champagne gold and micro-diffusers.</p>
+              <div class="text-[11px] text-stone-400 bg-stone-50 dark:bg-stone-800/60 px-2 py-1 rounded border border-stone-100 dark:border-stone-800">
+                52" Dia • Tunable 2700K-4000K
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0 border-t border-stone-100 dark:border-stone-800">
+            <div class="flex items-center justify-between py-3">
+              <span class="font-serif text-xl font-semibold text-stone-900 dark:text-stone-100">₹3,34,400</span>
+              <span class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">Ships in 24h</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToQuote('prod-4')" class="gold-glow-btn py-2 px-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-file-lines"></i> Quote
+              </button>
+              <button onclick="openQuickView('prod-4')" class="gold-outline-btn py-2 px-3 rounded-lg text-xs font-semibold text-center">
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Showcase 4 -->
+        <div class="lux-card group flex flex-col justify-between">
+          <div>
+            <div class="lux-card-img-wrap h-72">
+              <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Calais Alabaster Disc Chandelier" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full badge-stone">
+                Popular
+              </span>
+              <button onclick="openQuickView('prod-6')" class="absolute bottom-3 right-3 bg-white/90 dark:bg-stone-900/90 hover:bg-white text-stone-800 dark:text-stone-100 text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md transition opacity-0 group-hover:opacity-100 flex items-center gap-1.5">
+                <i class="fa-solid fa-eye text-amber-700 dark:text-amber-400"></i> Quick View
+              </button>
+            </div>
+            <div class="p-5">
+              <span class="text-xs text-amber-600 dark:text-amber-400 font-medium">Bedroom Suite • Alabaster</span>
+              <h3 class="font-serif text-lg font-medium text-stone-900 dark:text-stone-100 group-hover:text-amber-800 dark:group-hover:text-amber-400 transition mb-1">
+                Calais Alabaster Disc Chandelier
+              </h3>
+              <p class="text-xs text-stone-500 dark:text-stone-400 line-clamp-2 mb-3">Natural Spanish carved alabaster shields with burnished brass accents.</p>
+              <div class="text-[11px] text-stone-400 bg-stone-50 dark:bg-stone-800/60 px-2 py-1 rounded border border-stone-100 dark:border-stone-800">
+                32" Dia × 24" H • Diffused Warm
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0 border-t border-stone-100 dark:border-stone-800">
+            <div class="flex items-center justify-between py-3">
+              <span class="font-serif text-xl font-semibold text-stone-900 dark:text-stone-100">₹2,50,800</span>
+              <span class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">In Stock</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToQuote('prod-6')" class="gold-glow-btn py-2 px-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-file-lines"></i> Quote
+              </button>
+              <button onclick="openQuickView('prod-6')" class="gold-outline-btn py-2 px-3 rounded-lg text-xs font-semibold text-center">
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BESPOKE SERVICES: HALF CARD IMAGE / HALF CARD CONTENT (Updated as requested in screenshot) -->
+  <section class="py-20 bg-white dark:bg-stone-900 border-y border-stone-200 dark:border-stone-800">
+    <div class="lux-container">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs uppercase tracking-widest text-amber-700 dark:text-amber-400 font-semibold">Atelier Craftsmanship</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-100 mt-1">From Blueprint to Illumination</h2>
+        <p class="text-stone-500 dark:text-stone-400 text-sm mt-2">More than a retail showroom: our atelier provides complete custom fabrication, structural ceiling reinforcement, and white-glove chandelier installation.</p>
+      </div>
+
+      <!-- 3 HALF-CARD IMAGE / HALF-CARD CONTENT CARDS -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Custom Fabrication -->
+        <div class="lux-half-card group">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Custom Chandelier Design" />
+            <span class="absolute top-3 left-3 text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full badge-gold">
+              Bespoke Crafting
+            </span>
+          </div>
+          <div class="card-body">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-400 block mb-1">Tailor-Made Scaling</span>
+              <h3 class="font-serif text-2xl font-medium text-stone-900 dark:text-stone-100 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition mb-2">Custom Chandelier Design</h3>
+              <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed mb-6">Commission a one-of-a-kind statement piece with tailor-made proportions, Murano hand-blown glass drops, and bespoke brass finishes.</p>
+            </div>
+            <a href="services.html#custom-design" class="text-xs uppercase tracking-widest font-semibold text-amber-700 dark:text-amber-400 hover:text-amber-900 flex items-center gap-2 pt-3 border-t border-stone-100 dark:border-stone-800">
+              Explore Custom Fabrication <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: White-Glove Installation -->
+        <div class="lux-half-card group">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="White-Glove Installation" />
+            <span class="absolute top-3 left-3 text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full badge-stone">
+              Certified Rigging
+            </span>
+          </div>
+          <div class="card-body">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-400 block mb-1">Ceiling Reinforcement</span>
+              <h3 class="font-serif text-2xl font-medium text-stone-900 dark:text-stone-100 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition mb-2">White-Glove Installation</h3>
+              <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed mb-6">Our certified master electricians engineer unistrut ceiling blocking, automated winch hoists, and meticulous hand-pinning of every crystal prism.</p>
+            </div>
+            <a href="services.html#installation" class="text-xs uppercase tracking-widest font-semibold text-amber-700 dark:text-amber-400 hover:text-amber-900 flex items-center gap-2 pt-3 border-t border-stone-100 dark:border-stone-800">
+              Installation Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Restoration & Ultrasonic Care -->
+        <div class="lux-half-card group">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=800&q=80" alt="Restoration & Ultrasonic Care" />
+            <span class="absolute top-3 left-3 text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full badge-gold">
+              Conservation Lab
+            </span>
+          </div>
+          <div class="card-body">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-400 block mb-1">Heritage Preservation</span>
+              <h3 class="font-serif text-2xl font-medium text-stone-900 dark:text-stone-100 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition mb-2">Restoration & Crystal Care</h3>
+              <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed mb-6">Heirloom crystal preservation, UL-certified Teflon rewiring, European socket retrofits, and chemical-free de-ionized ultrasonic crystal cleansing.</p>
+            </div>
+            <a href="services.html#restoration" class="text-xs uppercase tracking-widest font-semibold text-amber-700 dark:text-amber-400 hover:text-amber-900 flex items-center gap-2 pt-3 border-t border-stone-100 dark:border-stone-800">
+              Restoration Atelier <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPLORE BY ROOM INSPIRATION -->
+  <section class="py-20 bg-[#faf9f5]">
+    <div class="lux-container">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs uppercase tracking-widest text-amber-700 dark:text-amber-400 font-semibold">Architectural Intent</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-100 mt-1">Curate By Room Environment</h2>
+        <p class="text-stone-500 dark:text-stone-400 text-sm mt-2">Every space demands specialized photometric calculations, beam distributions, and focal impact.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Room 1: Grand Foyer -->
+        <a href="products.html?room=foyer" class="group relative rounded-2xl overflow-hidden h-80 block shadow-md">
+          <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=80" alt="Grand Foyer Lighting" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-white">
+            <span class="text-[11px] uppercase tracking-widest text-amber-300 font-semibold block mb-1">Double Height & Cathedral</span>
+            <h3 class="font-serif text-2xl font-medium">Grand Foyer & Entries</h3>
+            <p class="text-xs text-stone-300 mt-1 opacity-90">Monumental cascading crystal and multi-tiered focal points.</p>
+            <span class="inline-flex items-center gap-2 text-xs font-semibold text-amber-300 mt-3 group-hover:translate-x-1 transition">
+              Explore Foyer Fixtures <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </span>
+          </div>
+        </a>
+
+        <!-- Room 2: Dining Room -->
+        <a href="products.html?room=dining" class="group relative rounded-2xl overflow-hidden h-80 block shadow-md">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Dining Room Chandeliers" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-white">
+            <span class="text-[11px] uppercase tracking-widest text-amber-300 font-semibold block mb-1">Table Proportions</span>
+            <h3 class="font-serif text-2xl font-medium">Dining Sanctuaries</h3>
+            <p class="text-xs text-stone-300 mt-1 opacity-90">Linear chandeliers and glare-free warm downward illumination.</p>
+            <span class="inline-flex items-center gap-2 text-xs font-semibold text-amber-300 mt-3 group-hover:translate-x-1 transition">
+              Explore Dining Chandeliers <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </span>
+          </div>
+        </a>
+
+        <!-- Room 3: Living Room -->
+        <a href="products.html?room=living" class="group relative rounded-2xl overflow-hidden h-80 block shadow-md">
+          <img src="https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?auto=format&fit=crop&w=800&q=80" alt="Living Room Lighting" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-white">
+            <span class="text-[11px] uppercase tracking-widest text-amber-300 font-semibold block mb-1">Sculptural Presence</span>
+            <h3 class="font-serif text-2xl font-medium">Grand Living Salons</h3>
+            <p class="text-xs text-stone-300 mt-1 opacity-90">Low-profile kinetic mobiles and radiating brass sputniks.</p>
+            <span class="inline-flex items-center gap-2 text-xs font-semibold text-amber-300 mt-3 group-hover:translate-x-1 transition">
+              Explore Living Room Fixtures <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </span>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SHOWROOM CONSULTATION CALLOUT -->
+  <section class="py-16 bg-[#141312] text-white">
+    <div class="lux-container">
+      <div class="bg-gradient-to-r from-stone-900 via-stone-850 to-stone-900 rounded-2xl border border-stone-800 p-8 sm:p-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div>
+          <span class="text-xs uppercase tracking-widest text-amber-400 font-semibold">Private Viewing Experience</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-medium mt-1 mb-2">Book a Private Showroom Gallery Appointment</h3>
+          <p class="text-stone-300 text-xs sm:text-sm max-w-xl font-light">Bring your architectural drawings or room dimensions. Our master lighting consultants will curate scale recommendations and demonstrate our crystal fixtures in full brilliance.</p>
+        </div>
+        <div class="shrink-0 flex flex-wrap gap-4">
+          <a href="contact.html" class="gold-glow-btn text-xs uppercase tracking-wider font-semibold py-3.5 px-6 rounded-xl flex items-center gap-2">
+            <i class="fa-solid fa-calendar-check"></i> Reserve Consultation
+          </a>
+          <a href="tel:+18005864373" class="gold-outline-btn text-xs uppercase tracking-wider font-semibold py-3.5 px-6 rounded-xl flex items-center gap-2">
+            <i class="fa-solid fa-phone"></i> Call Atelier
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (With Logo Before Brand Name, Centered Copyright, Removed Privacy Terms) -->
+  <footer class="bg-[#0e0d0c] text-stone-400 text-xs border-t border-stone-800 pt-16 pb-12">
+    <div class="lux-container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-stone-800">
+        
+        <!-- Brand Summary with Logo before brand name -->
+        <div class="lg:col-span-2">
+          <a href="index.html" class="inline-flex items-center gap-3 mb-3 group">
+            <svg class="w-8 h-8 text-amber-500 shrink-0 transition-transform group-hover:scale-105" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 3V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M11 8H25" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M8 12C8 17 12.5 21 18 21C23.5 21 28 17 28 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              <path d="M13 21V25C13 27.2 15.2 29 18 29C20.8 29 23 27.2 23 25V21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              <path d="M18 29V33" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <circle cx="18" cy="3" r="1.5" fill="currentColor" />
+              <circle cx="8" cy="12" r="1.5" fill="currentColor" />
+              <circle cx="28" cy="12" r="1.5" fill="currentColor" />
+              <circle cx="13" cy="25" r="1.2" fill="currentColor" />
+              <circle cx="23" cy="25" r="1.2" fill="currentColor" />
+              <circle cx="18" cy="33" r="1.5" fill="currentColor" />
+            </svg>
+            <span class="font-serif text-2xl font-medium tracking-tight text-stone-100 group-hover:text-amber-400 transition">
+              LUMIÈRE <span class="text-amber-500 font-light">&</span> CO.
+            </span>
+          </a>
+          <p class="text-stone-400 text-xs leading-relaxed max-w-sm mb-6">
+            Haute Éclairage atelier crafting bespoke chandeliers, architectural pendants, and precision photometric lighting systems for fine private estates and hospitality.
+          </p>
+          <div class="flex items-center gap-3 text-stone-300">
+            <a href="#" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition border border-stone-800" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition border border-stone-800" title="X (Twitter)" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition border border-stone-800" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition border border-stone-800" title="Pinterest" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition border border-stone-800" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div>
+          <h4 class="text-stone-200 font-semibold uppercase tracking-wider text-[11px] mb-4">Navigation</h4>
+          <ul class="space-y-2.5">
+            <li><a href="products.html" class="hover:text-amber-400 transition">Products By Room & Style</a></li>
+            <li><a href="services.html" class="hover:text-amber-400 transition">Bespoke Services</a></li>
+            <li><a href="guide.html" class="hover:text-amber-400 transition">Lighting Guide & Calculator</a></li>
+            <li><a href="blog.html" class="hover:text-amber-400 transition">Design Blog & Trends</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400 transition">Contact & Showrooms</a></li>
+          </ul>
+        </div>
+
+        <!-- Collections -->
+        <div>
+          <h4 class="text-stone-200 font-semibold uppercase tracking-wider text-[11px] mb-4">By Room & Style</h4>
+          <ul class="space-y-2.5">
+            <li><a href="products.html?room=foyer" class="hover:text-amber-400 transition">Grand Foyer Chandeliers</a></li>
+            <li><a href="products.html?room=dining" class="hover:text-amber-400 transition">Dining Room Linear Lights</a></li>
+            <li><a href="products.html?room=living" class="hover:text-amber-400 transition">Living Room Sculptures</a></li>
+            <li><a href="products.html?style=crystal" class="hover:text-amber-400 transition">Austrian Crystal Series</a></li>
+            <li><a href="products.html?style=alabaster" class="hover:text-amber-400 transition">Spanish Alabaster Series</a></li>
+          </ul>
+        </div>
+
+        <!-- Showrooms Info -->
+        <div>
+          <h4 class="text-stone-200 font-semibold uppercase tracking-wider text-[11px] mb-4">Flagship Galleries</h4>
+          <div class="space-y-3 text-stone-400">
+            <div>
+              <strong class="text-stone-200 block">New York Gallery:</strong>
+              <span>742 Madison Ave, New York, NY 10065</span>
+            </div>
+            <div>
+              <strong class="text-stone-200 block">Los Angeles Atelier:</strong>
+              <span>8900 Melrose Ave, West Hollywood, CA 90069</span>
+            </div>
+            <div class="pt-1">
+              <span class="text-amber-400 font-medium block">Concierge Hours:</span>
+              <span>Mon-Sat: 9:00 AM – 7:00 PM EST</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Centered (Terms & Privacy removed as requested) -->
+      <div class="pt-8 text-center text-stone-500 text-xs">
+        © 2026 LUMIÈRE & CO. HAUTE ÉCLAIRAGE. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- GLOBAL SLIDE-OVER QUOTATION DRAWER -->
+  <div id="quote-drawer" class="lux-drawer">
+    <div id="quote-drawer-backdrop" class="lux-drawer-backdrop"></div>
+    <div class="lux-drawer-content">
+      <div class="p-5 border-b border-stone-200 dark:border-stone-800 flex items-center justify-between bg-stone-50 dark:bg-stone-900">
+        <div>
+          <h3 class="font-serif text-xl font-medium text-stone-900 dark:text-stone-100">Your Quotation Request</h3>
+          <p class="text-xs text-stone-500 dark:text-stone-400">Selected lighting fixtures for trade or residential pricing</p>
+        </div>
+        <button id="quote-drawer-close" class="text-stone-400 hover:text-stone-800 text-lg p-2">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto p-5">
+        <div id="quote-drawer-items" class="space-y-1"></div>
+        <div id="quote-empty-state" class="py-16 text-center text-stone-400">
+          <i class="fa-solid fa-file-invoice text-4xl text-stone-300 dark:text-stone-600 mb-3"></i>
+          <h4 class="font-serif text-lg font-medium text-stone-700 dark:text-stone-300">Your Quotation List is Empty</h4>
+          <p class="text-xs text-stone-500 max-w-xs mx-auto mt-1 mb-4">Browse our statement chandeliers and click "Quote" to assemble your project inquiry list.</p>
+          <a href="products.html" onclick="closeQuoteDrawer()" class="gold-glow-btn text-xs uppercase tracking-wider font-semibold py-2.5 px-4 rounded-lg inline-block">
+            Browse Collections
+          </a>
+        </div>
+      </div>
+
+      <div id="quote-drawer-footer" class="p-5 border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-900">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs uppercase tracking-wider text-stone-500 dark:text-stone-400 font-semibold">Estimated Total Value:</span>
+          <span id="quote-subtotal" class="font-serif text-2xl font-semibold text-stone-900 dark:text-stone-100">₹0</span>
+        </div>
+        <a href="contact.html?type=quote" class="gold-glow-btn w-full block text-center py-3 rounded-lg text-xs uppercase tracking-wider font-semibold">
+          Submit List For Formal CAD & Quote
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- GLOBAL SEARCH MODAL -->
+  <div id="search-modal" class="lux-modal">
+    <div id="search-modal-backdrop" class="lux-modal-backdrop"></div>
+    <div class="lux-modal-content p-6">
+      <div class="flex items-center justify-between pb-4 border-b border-stone-200 dark:border-stone-800 mb-4">
+        <div class="flex items-center gap-3 w-full">
+          <i class="fa-solid fa-magnifying-glass text-amber-600 dark:text-amber-400 text-lg"></i>
+          <input id="global-search-input" type="text" placeholder="Search chandeliers, foyer, dining, brass, alabaster, articles..." class="w-full text-base border-none outline-none bg-transparent text-stone-900 dark:text-stone-100 placeholder:text-stone-400" />
+        </div>
+        <button id="search-modal-close" class="text-stone-400 hover:text-stone-800 text-lg p-2">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div id="global-search-results" class="max-h-96 overflow-y-auto">
+        <div class="text-center py-8 text-stone-400">
+          <p class="text-xs">Type a keyword above to find statement fixtures and lighting design guides.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GLOBAL QUICK VIEW MODAL -->
+  <div id="quickview-modal" class="lux-modal">
+    <div id="quickview-modal-backdrop" class="lux-modal-backdrop"></div>
+    <div class="lux-modal-content p-6 sm:p-8 relative">
+      <button id="quickview-modal-close" class="absolute top-4 right-4 text-stone-400 hover:text-stone-800 text-xl p-2 z-10">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="quickview-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script src="js/products-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

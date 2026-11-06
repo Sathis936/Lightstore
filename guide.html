@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUMIÈRE & CO. | Architectural Lighting & Chandelier Guide</title>
+  <meta name="description" content="Chandelier sizing calculator, Kelvin color temperature guide, hanging height rules, and photometric lighting wisdom for luxury homes." />
+  
+  <!-- Favicon / Logo in Browser Title -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' fill='none'><path d='M18 3V8M11 8H25M8 12C8 17 12.5 21 18 21C23.5 21 28 17 28 12M13 21V25C13 27.2 15.2 29 18 29C20.8 29 23 27.2 23 25V21M18 29V33' stroke='%23c5a059' stroke-width='2.2' stroke-linecap='round'/><circle cx='18' cy='3' r='1.5' fill='%23c5a059'/><circle cx='8' cy='12' r='1.5' fill='%23c5a059'/><circle cx='28' cy='12' r='1.5' fill='%23c5a059'/><circle cx='18' cy='33' r='1.5' fill='%23c5a059'/></svg>" />
+  
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              300: '#ebd27b',
+              400: '#dfc282',
+              500: '#c5a059',
+              600: '#a3823d',
+              700: '#806429'
+            },
+            stone: {
+              850: '#1f1d1a',
+              950: '#0e0d0c'
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Luxury Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-[#faf9f5] text-stone-900 antialiased selection:bg-amber-200 selection:text-stone-900">
+
+  <!-- MAIN NAVIGATION BAR (Top bar removed, Brand logo SVG before brand name) -->
+  <header class="sticky top-0 z-50 lux-navbar">
+    <div class="lux-container flex items-center justify-between h-20">
+      
+      <!-- Logo with Brand Emblem SVG placed BEFORE Brand Name -->
+      <a href="index.html" class="flex items-center gap-3 text-left group shrink-0">
+        <svg class="w-8 h-8 text-amber-600 dark:text-amber-400 shrink-0 inline-block transition-transform duration-300 group-hover:scale-105" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 3V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M11 8H25" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M8 12C8 17 12.5 21 18 21C23.5 21 28 17 28 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          <path d="M13 21V25C13 27.2 15.2 29 18 29C20.8 29 23 27.2 23 25V21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          <path d="M18 29V33" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <circle cx="18" cy="3" r="1.5" fill="currentColor" />
+          <circle cx="8" cy="12" r="1.5" fill="currentColor" />
+          <circle cx="28" cy="12" r="1.5" fill="currentColor" />
+          <circle cx="13" cy="25" r="1.2" fill="currentColor" />
+          <circle cx="23" cy="25" r="1.2" fill="currentColor" />
+          <circle cx="18" cy="33" r="1.5" fill="currentColor" />
+        </svg>
+        <div class="flex flex-col justify-center">
+          <span class="font-serif text-2xl sm:text-3xl font-medium tracking-tight text-stone-900 dark:text-stone-100 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition leading-none">
+            LUMIÈRE <span class="text-amber-600 font-light">&</span> CO.
+          </span>
+          <span class="text-[9.5px] uppercase tracking-[0.2em] text-stone-500 dark:text-stone-400 font-semibold whitespace-nowrap mt-1 leading-none">
+            Haute Éclairage • Atelier
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links (Home Dropdown & RTL + Theme Toggles after Contact) -->
+      <nav class="hidden xl:flex items-center space-x-0.5">
+        
+        <!-- Home Dropdown -->
+        <div class="relative group">
+          <button class="nav-link flex items-center gap-1.5 focus:outline-none">
+            <span>Home</span>
+            <i class="fa-solid fa-chevron-down text-[10px] transition group-hover:rotate-180"></i>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-56 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-xl p-2 space-y-1">
+              <a href="index.html" class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-xs font-semibold text-stone-800 dark:text-stone-200 hover:bg-amber-50 dark:hover:bg-stone-800 hover:text-amber-700 transition">
+                <i class="fa-solid fa-crown text-amber-600 text-xs"></i>
+                <div>
+                  <div class="font-medium">Home 1 - Grand Atelier</div>
+                  <div class="text-[10px] text-stone-400 font-normal">Statement & Crystal</div>
+                </div>
+              </a>
+              <a href="home-2.html" class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-xs font-semibold text-stone-800 dark:text-stone-200 hover:bg-amber-50 dark:hover:bg-stone-800 hover:text-amber-700 transition">
+                <i class="fa-solid fa-cubes text-amber-600 text-xs"></i>
+                <div>
+                  <div class="font-medium">Home 2 - Modern Luxe</div>
+                  <div class="text-[10px] text-stone-400 font-normal">Architectural & Sculptural</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="guide.html" class="nav-link active">Lighting Guide</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+
+        <!-- RTL Button & Theme Toggle Button right after Contact -->
+        <div class="flex items-center gap-2 ml-2 pl-2 border-l border-stone-300 dark:border-stone-700">
+          <button class="rtl-toggle-btn nav-control-btn" title="Toggle RTL / LTR Layout">
+            <i class="fa-solid fa-right-left text-[11px]"></i>
+            <span class="rtl-btn-text">RTL</span>
+          </button>
+          <button class="theme-toggle-btn nav-control-btn w-9 h-9 !p-0" title="Toggle Light / Dark Theme">
+            <i class="fa-solid fa-moon text-xs"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Action Utilities with Proper Spacing -->
+      <div class="flex items-center gap-3 shrink-0">
+        <!-- Quotation Drawer Trigger -->
+        <button class="quote-drawer-trigger relative w-10 h-10 rounded-full border border-stone-200 dark:border-stone-700 hover:border-amber-400 text-stone-700 dark:text-stone-200 hover:text-amber-700 flex items-center justify-center transition" title="View Quotation Request" aria-label="View Quotation Request">
+          <i class="fa-solid fa-file-invoice text-sm"></i>
+          <span class="quote-count-badge absolute -top-1 -right-1 bg-amber-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center hidden">0</span>
+        </button>
+
+        <!-- CTA: Book Showroom -->
+        <a href="contact.html" class="hidden sm:inline-flex gold-glow-btn text-xs uppercase tracking-wider font-semibold py-2.5 px-4 rounded-lg items-center gap-2">
+          <i class="fa-solid fa-calendar-check"></i> Book Showroom
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button id="mobile-menu-toggle" class="xl:hidden w-10 h-10 rounded-lg border border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-200 flex items-center justify-center" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden xl:hidden">
+    <div class="absolute right-0 top-0 bottom-0 w-80 bg-white dark:bg-stone-900 p-6 shadow-2xl flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-stone-200 dark:border-stone-800">
+          <div class="font-serif text-xl font-medium text-stone-900 dark:text-stone-100">LUMIÈRE & CO.</div>
+          <button id="mobile-menu-close" class="text-stone-400 hover:text-stone-800 text-xl p-2">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-1.5 mt-6">
+          <div class="p-2 bg-amber-50/60 dark:bg-stone-800/60 rounded-xl mb-1">
+            <span class="text-[10px] uppercase font-bold text-amber-700 dark:text-amber-400 px-2 block mb-1">Home Editions</span>
+            <a href="index.html" class="p-2 text-xs font-medium text-stone-700 dark:text-stone-300 block hover:bg-white dark:hover:bg-stone-800 rounded-lg">Home 1 - Grand Atelier</a>
+            <a href="home-2.html" class="p-2 text-xs font-medium text-stone-700 dark:text-stone-300 block hover:bg-white dark:hover:bg-stone-800 rounded-lg">Home 2 - Modern Luxe</a>
+          </div>
+          <a href="about.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">About Us</a>
+          <a href="products.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">Products By Room & Style</a>
+          <a href="services.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">Bespoke Services</a>
+          <a href="guide.html" class="p-2.5 text-xs font-semibold text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-stone-800 rounded-lg">Lighting Guide & Calculator</a>
+          <a href="blog.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">Design Blog & Trends</a>
+          <a href="contact.html" class="p-2.5 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800 rounded-lg">Contact & Showrooms</a>
+        </nav>
+
+        <div class="flex items-center gap-2 pt-4 mt-4 border-t border-stone-200 dark:border-stone-800">
+          <button class="rtl-toggle-btn nav-control-btn flex-1 py-2" title="Toggle RTL / LTR">
+            <i class="fa-solid fa-right-left text-xs"></i>
+            <span class="rtl-btn-text">RTL Layout</span>
+          </button>
+          <button class="theme-toggle-btn nav-control-btn flex-1 py-2" title="Toggle Dark Theme">
+            <i class="fa-solid fa-moon text-xs"></i>
+            <span>Atmosphere</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-stone-200 dark:border-stone-800">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIFIED HERO SECTION (Consistent across all pages) -->
+  <section class="page-hero-unified" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80');">
+    <div class="lux-container">
+      <div class="page-hero-content">
+        <span class="page-hero-badge">
+          <i class="fa-solid fa-graduation-cap text-amber-400"></i> Architectural Lighting Guide
+        </span>
+        <h1 class="page-hero-title">
+          The Master Chandelier Sizing & Illumination Guide
+        </h1>
+        <p class="page-hero-desc">
+          Master the physics of proportions, dining table clearances, Kelvin color temperatures, and ambient light layering with our interactive calculators.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE TOOL 1: CHANDELIER SIZING CALCULATOR -->
+  <section class="py-16 bg-[#faf9f5]">
+    <div class="lux-container">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs uppercase tracking-widest text-amber-700 dark:text-amber-400 font-semibold">Interactive Tool 01</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-100 mt-1">Chandelier Sizing & Scale Calculator</h2>
+        <p class="text-stone-500 dark:text-stone-400 text-sm mt-2">Enter your room dimensions and ceiling height. The calculator utilizes standard architectural design formulas to determine ideal fixture diameter, hanging clearance, and lumen output.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+        
+        <!-- Calculator Inputs -->
+        <div class="lg:col-span-5 bg-white dark:bg-stone-900 p-6 sm:p-8 rounded-2xl border border-stone-200 dark:border-stone-800 shadow-sm flex flex-col justify-between h-full">
+          <div>
+            <h3 class="font-serif text-xl font-medium text-stone-900 dark:text-stone-100 mb-4 pb-3 border-b border-stone-100 dark:border-stone-800 flex items-center justify-between">
+              <span>Room Specifications</span>
+              <i class="fa-solid fa-ruler-combined text-amber-600 dark:text-amber-400 text-sm"></i>
+            </h3>
+
+            <form id="chandelier-calculator-form" class="space-y-4">
+              
+              <div class="grid grid-cols-2 gap-3">
+                <div class="calc-input-group">
+                  <label for="calc-room-length">Room Length (Feet)</label>
+                  <input type="number" id="calc-room-length" value="16" min="6" max="60" step="1" />
+                </div>
+                <div class="calc-input-group">
+                  <label for="calc-room-width">Room Width (Feet)</label>
+                  <input type="number" id="calc-room-width" value="14" min="6" max="60" step="1" />
+                </div>
+              </div>
+
+              <div class="calc-input-group">
+                <label for="calc-ceiling-height">Ceiling Height (Feet)</label>
+                <select id="calc-ceiling-height">
+                  <option value="8">8 Feet (Standard Residential)</option>
+                  <option value="9">9 Feet (High Ceiling)</option>
+                  <option value="10" selected>10 Feet (Spacious Salon)</option>
+                  <option value="12">12 Feet (Formal Great Room)</option>
+                  <option value="16">16 Feet (Double Height Entry)</option>
+                  <option value="20">20+ Feet (Grand Cathedral / Foyer)</option>
+                </select>
+              </div>
+
+              <div class="calc-input-group">
+                <label for="calc-application">Fixture Application</label>
+                <select id="calc-application">
+                  <option value="room">Open Room / Foyer Walkway Clearance</option>
+                  <option value="dining">Above Formal Dining Table</option>
+                </select>
+              </div>
+
+              <div id="table-width-wrapper" class="calc-input-group">
+                <label for="calc-table-width">Dining Table Width (Inches, if dining)</label>
+                <input type="number" id="calc-table-width" value="44" min="24" max="80" step="1" />
+              </div>
+
+              <div class="p-3.5 bg-stone-50 dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 text-xs text-stone-600 dark:text-stone-300">
+                <i class="fa-solid fa-bolt text-amber-600 dark:text-amber-400 mr-1"></i>
+                Calculations update continuously as you change the inputs.
+              </div>
+
+            </form>
+          </div>
+
+          <div class="pt-6 border-t border-stone-100 dark:border-stone-800 mt-6 flex items-center justify-between text-xs text-stone-500 dark:text-stone-400">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400 text-xs"></i> NEC Architectural Standard</span>
+            <button type="reset" form="chandelier-calculator-form" class="hover:text-amber-700 dark:hover:text-amber-400 font-medium transition cursor-pointer">Reset Defaults</button>
+          </div>
+
+        </div>
+
+        <!-- Real-Time Reactive Output -->
+        <div class="lg:col-span-7 bg-stone-900 text-white p-6 sm:p-8 rounded-2xl border border-stone-800 shadow-xl flex flex-col justify-between h-full">
+          <div class="flex items-center justify-between pb-4 border-b border-stone-800 mb-6">
+            <span class="text-xs uppercase tracking-widest text-amber-400 font-semibold">Architectural Proportions Recommendation</span>
+            <span class="text-xs text-stone-400">Strict Scale Compliance</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            
+            <div class="bg-stone-800/80 p-5 rounded-xl border border-stone-700">
+              <span class="text-xs uppercase tracking-wider text-amber-300 font-semibold block mb-1">Recommended Diameter</span>
+              <div id="res-diameter" class="font-serif text-3xl font-semibold text-white mb-1">30" (76 cm)</div>
+              <p class="text-[11px] text-stone-400 leading-snug">Formula: (Room Length + Room Width) in feet = Diameter in inches.</p>
+            </div>
+
+            <div class="bg-stone-800/80 p-5 rounded-xl border border-stone-700">
+              <span class="text-xs uppercase tracking-wider text-amber-300 font-semibold block mb-1">Ideal Fixture Body Height</span>
+              <div id="res-fixture-height" class="font-serif text-3xl font-semibold text-white mb-1">25" – 30" tall</div>
+              <p class="text-[11px] text-stone-400 leading-snug">Formula: 2.5 to 3 inches of chandelier body height per vertical foot of ceiling.</p>
+            </div>
+
+          </div>
+
+          <div class="space-y-3 bg-stone-800/50 p-5 rounded-xl border border-stone-700/80 mb-6 text-xs text-stone-300">
+            <div class="flex items-start gap-2.5">
+              <i class="fa-solid fa-arrows-up-down text-amber-400 mt-0.5 text-sm"></i>
+              <div>
+                <strong class="text-stone-100 block">Hanging Height Clearance:</strong>
+                <span id="res-hanging-height">Maintain at least <strong>7' 0" (84")</strong> minimum clearance between bottom of fixture and floor.</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-2.5">
+              <i class="fa-solid fa-sun text-amber-400 mt-0.5 text-sm"></i>
+              <div>
+                <strong class="text-stone-100 block">Recommended Total Illumination:</strong>
+                <span id="res-lumens">4,480 Lumens (approx. 56W modern LED)</span>
+              </div>
+            </div>
+
+            <div id="res-table-note" class="text-amber-300 text-xs hidden"></div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3 pt-6 border-t border-stone-800 mt-auto">
+            <a href="products.html" class="gold-glow-btn text-xs uppercase tracking-wider font-semibold py-3 px-6 rounded-lg text-center flex-1">
+              Find Fixtures in This Size
+            </a>
+            <a href="contact.html?type=custom-scale" class="gold-outline-btn text-xs uppercase tracking-wider font-semibold py-3 px-5 rounded-lg text-center">
+              Request Custom CAD Drawing
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE TOOL 2: KELVIN COLOR TEMPERATURE VISUALIZER -->
+  <section class="py-16 bg-white dark:bg-stone-900 border-y border-stone-200 dark:border-stone-800">
+    <div class="lux-container">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs uppercase tracking-widest text-amber-700 dark:text-amber-400 font-semibold">Interactive Tool 02</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-100 mt-1">Interactive Kelvin Color Visualizer</h2>
+        <p class="text-stone-500 dark:text-stone-400 text-sm mt-2">Drag the temperature slider below to simulate how different light spectrums alter living room warmth, mood, and material highlights.</p>
+      </div>
+
+      <div class="bg-[#faf9f5] dark:bg-stone-800/60 p-6 sm:p-10 rounded-2xl border border-stone-200 dark:border-stone-700 max-w-4xl mx-auto">
+        
+        <div class="mb-8">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs uppercase tracking-wider text-stone-500 dark:text-stone-400 font-semibold">Slide Color Temperature (Kelvin):</span>
+            <span id="kelvin-value-display" class="font-serif text-2xl font-bold text-amber-800 dark:text-amber-400">2700K</span>
+          </div>
+          <input type="range" id="kelvin-slider" class="kelvin-slider" min="2200" max="5000" step="100" value="2700" />
+          <div class="flex justify-between text-[11px] text-stone-400 mt-2 font-medium">
+            <span>2200K (Candlelight)</span>
+            <span>2700K (Warm Sunset)</span>
+            <span>3000K (Soft White)</span>
+            <span>4000K (Neutral)</span>
+            <span>5000K (Daylight)</span>
+          </div>
+        </div>
+
+        <div id="kelvin-preview-box" class="kelvin-preview-box p-8 text-center mb-6 shadow-inner">
+          <div id="kelvin-glow-effect" class="kelvin-glow-effect"></div>
+          <div class="relative z-10 max-w-lg mx-auto">
+            <i class="fa-solid fa-lightbulb text-5xl mb-4 text-amber-300"></i>
+            <h3 id="kelvin-name-display" class="font-serif text-2xl sm:text-3xl font-medium mb-3">
+              Warm Golden White (The Architectural Favorite)
+            </h3>
+            <p id="kelvin-desc-display" class="text-xs sm:text-sm leading-relaxed opacity-90">
+              The quintessential luxury residential temperature. Accentuates warm hardwood, rich brass chandeliers, and velvets. Flattering to skin tones without glare.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-stone-200 dark:border-stone-700 text-xs">
+          <div class="p-3 bg-white dark:bg-stone-800 rounded-lg border border-stone-200 dark:border-stone-700">
+            <strong class="text-stone-900 dark:text-stone-100 block mb-1">2200K – 2700K</strong>
+            <span class="text-stone-500 dark:text-stone-400">Formal dining, grand living rooms, bedrooms, and crystal chandeliers.</span>
+          </div>
+          <div class="p-3 bg-white dark:bg-stone-800 rounded-lg border border-stone-200 dark:border-stone-700">
+            <strong class="text-stone-900 dark:text-stone-100 block mb-1">3000K</strong>
+            <span class="text-stone-500 dark:text-stone-400">Luxury chef kitchens, breakfast islands, marble powder rooms.</span>
+          </div>
+          <div class="p-3 bg-white dark:bg-stone-800 rounded-lg border border-stone-200 dark:border-stone-700">
+            <strong class="text-stone-900 dark:text-stone-100 block mb-1">4000K+</strong>
+            <span class="text-stone-500 dark:text-stone-400">Private gallery fine art display, walk-in closets, home offices.</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-16 bg-[#faf9f5] dark:bg-stone-950">
+    <div class="lux-container">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs uppercase tracking-widest text-amber-700 dark:text-amber-400 font-semibold">Plan by Space</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-100 mt-2">Room-by-room lighting notes</h2>
+        <p class="text-stone-500 dark:text-stone-400 text-sm mt-3">Start with how the room is used, then choose a focal fixture that supports the layers of light around it.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article class="lux-half-card group">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" alt="Elegant chandelier illuminating a double-height foyer" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div>
+              <span class="text-xs uppercase tracking-widest text-amber-700 dark:text-amber-400 font-semibold">Entry & Foyer</span>
+              <h3 class="font-serif text-2xl font-medium text-stone-900 dark:text-stone-100 mt-2 mb-3">Make the arrival feel balanced</h3>
+              <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed">Use the room-sizing calculator as a starting point, then check the fixture from both the entrance and upper landings. In a double-height foyer, account for the full drop and keep circulation clear beneath it.</p>
+            </div>
+          </div>
+        </article>
+        <article class="lux-half-card group">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80" alt="Pendant lighting centered above a dining table" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div>
+              <span class="text-xs uppercase tracking-widest text-amber-700 dark:text-amber-400 font-semibold">Dining Room</span>
+              <h3 class="font-serif text-2xl font-medium text-stone-900 dark:text-stone-100 mt-2 mb-3">Light the table, not the sightline</h3>
+              <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed">Center a chandelier over the table rather than the whole room. Choose a dimmable warm-white source and check seated eye-level sightlines so guests can see one another comfortably.</p>
+            </div>
+          </div>
+        </article>
+        <article class="lux-half-card group">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80" alt="Comfortable living room with layered ambient lighting" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div>
+              <span class="text-xs uppercase tracking-widest text-amber-700 dark:text-amber-400 font-semibold">Living & Bedroom</span>
+              <h3 class="font-serif text-2xl font-medium text-stone-900 dark:text-stone-100 mt-2 mb-3">Layer for comfort</h3>
+              <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed">Pair a decorative centrepiece with reading or task lights and softer indirect sources. Use separate dimming zones to shift from practical daytime light to a relaxed evening atmosphere.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="mt-8 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-6 sm:p-8">
+        <h3 class="font-serif text-2xl font-medium text-stone-900 dark:text-stone-100 mb-4">Before you choose a fixture</h3>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-stone-600 dark:text-stone-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-600 dark:text-amber-400 mt-1"></i><span>Measure the room, table, ceiling height, and intended hanging point.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-600 dark:text-amber-400 mt-1"></i><span>Confirm ceiling support and electrical capacity for the fixture weight and controls.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-600 dark:text-amber-400 mt-1"></i><span>Match colour temperature and dimming to the room’s materials and everyday use.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-600 dark:text-amber-400 mt-1"></i><span>Check the manufacturer’s installation instructions and use a qualified electrician.</span></li>
+        </ul>
+        <a href="services.html" class="gold-glow-btn inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold py-3 px-5 rounded-lg mt-6">Get specialist project help <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (Logo before brand name, centered copyright, no privacy terms) -->
+  <footer class="bg-[#0e0d0c] text-stone-400 text-xs border-t border-stone-800 pt-16 pb-12">
+    <div class="lux-container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-stone-800">
+        
+        <!-- Brand Summary with Logo before brand name -->
+        <div class="lg:col-span-2">
+          <a href="index.html" class="inline-flex items-center gap-3 mb-3 group">
+            <svg class="w-8 h-8 text-amber-500 shrink-0 transition-transform group-hover:scale-105" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 3V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M11 8H25" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M8 12C8 17 12.5 21 18 21C23.5 21 28 17 28 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              <path d="M13 21V25C13 27.2 15.2 29 18 29C20.8 29 23 27.2 23 25V21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              <path d="M18 29V33" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <circle cx="18" cy="3" r="1.5" fill="currentColor" />
+              <circle cx="8" cy="12" r="1.5" fill="currentColor" />
+              <circle cx="28" cy="12" r="1.5" fill="currentColor" />
+              <circle cx="13" cy="25" r="1.2" fill="currentColor" />
+              <circle cx="23" cy="25" r="1.2" fill="currentColor" />
+              <circle cx="18" cy="33" r="1.5" fill="currentColor" />
+            </svg>
+            <span class="font-serif text-2xl font-medium tracking-tight text-stone-100 group-hover:text-amber-400 transition">
+              LUMIÈRE <span class="text-amber-500 font-light">&</span> CO.
+            </span>
+          </a>
+          <p class="text-stone-400 text-xs leading-relaxed max-w-sm mb-6">
+            Haute Éclairage atelier crafting bespoke chandeliers, architectural pendants, and precision photometric lighting systems for fine private estates and hospitality.
+          </p>
+          <div class="flex items-center gap-3 text-stone-300">
+            <a href="#" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition border border-stone-800" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition border border-stone-800" title="X (Twitter)" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition border border-stone-800" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition border border-stone-800" title="Pinterest" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition border border-stone-800" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-stone-200 font-semibold uppercase tracking-wider text-[11px] mb-4">Navigation</h4>
+          <ul class="space-y-2.5">
+            <li><a href="products.html" class="hover:text-amber-400 transition">Products By Room & Style</a></li>
+            <li><a href="services.html" class="hover:text-amber-400 transition">Bespoke Services</a></li>
+            <li><a href="guide.html" class="hover:text-amber-400 transition">Lighting Guide & Calculator</a></li>
+            <li><a href="blog.html" class="hover:text-amber-400 transition">Design Blog & Trends</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400 transition">Contact & Showrooms</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-stone-200 font-semibold uppercase tracking-wider text-[11px] mb-4">By Room & Style</h4>
+          <ul class="space-y-2.5">
+            <li><a href="products.html?room=foyer" class="hover:text-amber-400 transition">Grand Foyer Chandeliers</a></li>
+            <li><a href="products.html?room=dining" class="hover:text-amber-400 transition">Dining Room Linear Lights</a></li>
+            <li><a href="products.html?room=living" class="hover:text-amber-400 transition">Living Room Sculptures</a></li>
+            <li><a href="products.html?style=crystal" class="hover:text-amber-400 transition">Austrian Crystal Series</a></li>
+            <li><a href="products.html?style=alabaster" class="hover:text-amber-400 transition">Spanish Alabaster Series</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-stone-200 font-semibold uppercase tracking-wider text-[11px] mb-4">Flagship Galleries</h4>
+          <div class="space-y-3 text-stone-400">
+            <div>
+              <strong class="text-stone-200 block">New York Gallery:</strong>
+              <span>742 Madison Ave, New York, NY 10065</span>
+            </div>
+            <div>
+              <strong class="text-stone-200 block">Los Angeles Atelier:</strong>
+              <span>8900 Melrose Ave, West Hollywood, CA 90069</span>
+            </div>
+            <div class="pt-1">
+              <span class="text-amber-400 font-medium block">Concierge Hours:</span>
+              <span>Mon-Sat: 9:00 AM – 7:00 PM EST</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Centered -->
+      <div class="pt-8 text-center text-stone-500 text-xs">
+        © 2026 LUMIÈRE & CO. HAUTE ÉCLAIRAGE. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- GLOBAL SLIDE-OVER QUOTATION DRAWER -->
+  <div id="quote-drawer" class="lux-drawer">
+    <div id="quote-drawer-backdrop" class="lux-drawer-backdrop"></div>
+    <div class="lux-drawer-content">
+      <div class="p-5 border-b border-stone-200 dark:border-stone-800 flex items-center justify-between bg-stone-50 dark:bg-stone-900">
+        <div>
+          <h3 class="font-serif text-xl font-medium text-stone-900 dark:text-stone-100">Your Quotation Request</h3>
+          <p class="text-xs text-stone-500 dark:text-stone-400">Selected lighting fixtures for trade or residential pricing</p>
+        </div>
+        <button id="quote-drawer-close" class="text-stone-400 hover:text-stone-800 p-2 text-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto p-5">
+        <div id="quote-drawer-items" class="space-y-1"></div>
+        <div id="quote-empty-state" class="py-16 text-center text-stone-400">
+          <i class="fa-solid fa-file-invoice text-4xl text-stone-300 dark:text-stone-600 mb-3"></i>
+          <h4 class="font-serif text-lg font-medium text-stone-700 dark:text-stone-300">Your Quotation List is Empty</h4>
+          <p class="text-xs text-stone-500 max-w-xs mx-auto mt-1 mb-4">Browse our statement chandeliers and click "Quote" to assemble your project inquiry list.</p>
+          <a href="products.html" onclick="closeQuoteDrawer()" class="gold-glow-btn text-xs uppercase tracking-wider font-semibold py-2.5 px-4 rounded-lg inline-block">
+            Browse Collections
+          </a>
+        </div>
+      </div>
+
+      <div id="quote-drawer-footer" class="p-5 border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-900">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs uppercase tracking-wider text-stone-500 dark:text-stone-400 font-semibold">Estimated Total Value:</span>
+          <span id="quote-subtotal" class="font-serif text-2xl font-semibold text-stone-900 dark:text-stone-100">₹0</span>
+        </div>
+        <a href="contact.html?type=quote" class="gold-glow-btn w-full block text-center py-3 rounded-lg text-xs uppercase tracking-wider font-semibold">
+          Submit List For Formal CAD & Quote
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- GLOBAL SEARCH MODAL -->
+  <div id="search-modal" class="lux-modal">
+    <div id="search-modal-backdrop" class="lux-modal-backdrop"></div>
+    <div class="lux-modal-content p-6">
+      <div class="flex items-center justify-between pb-4 border-b border-stone-200 dark:border-stone-800 mb-4">
+        <div class="flex items-center gap-3 w-full">
+          <i class="fa-solid fa-magnifying-glass text-amber-600 dark:text-amber-400 text-lg"></i>
+          <input id="global-search-input" type="text" placeholder="Search chandeliers, foyer, dining, brass, alabaster, articles..." class="w-full text-base border-none outline-none bg-transparent text-stone-900 dark:text-stone-100 placeholder:text-stone-400" />
+        </div>
+        <button id="search-modal-close" class="text-stone-400 hover:text-stone-800 p-2 text-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div id="global-search-results" class="max-h-96 overflow-y-auto">
+        <div class="text-center py-8 text-stone-400">
+          <p class="text-xs">Type a keyword above to find statement fixtures and lighting design guides.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script src="js/products-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

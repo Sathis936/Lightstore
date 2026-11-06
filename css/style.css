@@ -1,0 +1,862 @@
+/* ==========================================================================
+   LUMIÈRE & CO. - LUXURY LIGHTING & CHANDELIER STORE
+   Aesthetic Multipurpose Service & Retail Template
+   Strict Symmetric Alignment, Consistent Hero Standards & Dual Themes
+   ========================================================================== */
+
+/* 1. Global Reset & Symmetric Layout Foundation */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-gold: #c5a059;
+  --primary-gold-light: #dfc282;
+  --primary-gold-dark: #997834;
+  --gold-glow: rgba(197, 160, 89, 0.28);
+  --charcoal-900: #121212;
+  --charcoal-800: #1a1918;
+  --charcoal-700: #262422;
+  --charcoal-600: #3b3734;
+  --stone-warm: #fcfbf9;
+  --stone-card: #ffffff;
+  --stone-border: #e8e4db;
+  --stone-text-muted: #78716c;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden !important;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #faf9f5;
+  color: #1c1917;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body > footer {
+  margin-top: auto;
+}
+
+/* STRICT SYMMETRIC CONTAINER (Guarantees Equal Left & Right Spacing) */
+.lux-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+}
+
+@media (min-width: 640px) {
+  .lux-container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lux-container {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+  }
+}
+
+/* 2. UNIFIED HERO SECTION (Consistent Across ALL Pages)
+   Consistent hero size, font style, font size, and centered alignment */
+.page-hero-unified {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center !important;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #141312;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.page-hero-unified::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(28, 25, 23, 0.72) 0%, rgba(14, 13, 12, 0.94) 100%);
+  z-index: 1;
+}
+
+/* Subtle decorative warm lighting flare behind hero text */
+.page-hero-unified::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse at center, rgba(197, 160, 89, 0.18) 0%, rgba(197, 160, 89, 0) 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 860px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1.1rem;
+  border-radius: 9999px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #ebd27b;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  backdrop-filter: blur(4px);
+}
+
+.page-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.15rem, 4.2vw, 3.25rem) !important;
+  line-height: 1.15;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.015em;
+  text-align: center;
+  max-width: 820px;
+}
+
+.page-hero-desc {
+  font-family: var(--font-sans);
+  font-size: clamp(0.95rem, 1.6vw, 1.125rem);
+  line-height: 1.65;
+  color: #d6d3d1;
+  font-weight: 300;
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* 3. Typography & Luxury Elements */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.text-gold {
+  color: var(--primary-gold);
+}
+
+.bg-gold {
+  background-color: var(--primary-gold);
+}
+
+.border-gold {
+  border-color: var(--primary-gold);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #dfc282 0%, #c5a059 50%, #997834 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-glow-btn {
+  background: linear-gradient(135deg, #d8b86d 0%, #c5a059 100%);
+  color: #171512;
+  font-weight: 600;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(197, 160, 89, 0.22);
+}
+
+.gold-glow-btn:hover {
+  background: linear-gradient(135deg, #e4c77f 0%, #d4ae65 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(197, 160, 89, 0.38);
+}
+
+.gold-outline-btn {
+  border: 1px solid var(--primary-gold);
+  color: var(--primary-gold);
+  background: transparent;
+  transition: all 0.25s ease;
+}
+
+.gold-outline-btn:hover {
+  background: var(--primary-gold);
+  color: #171512;
+  transform: translateY(-2px);
+}
+
+/* 4. Luxury Card Styling & Half-Card Image Layout */
+.lux-card {
+  background: var(--stone-card);
+  border: 1px solid var(--stone-border);
+  border-radius: 14px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.lux-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(197, 160, 89, 0.5);
+  box-shadow: 0 16px 36px -12px rgba(28, 25, 23, 0.1), 0 0 20px -5px rgba(197, 160, 89, 0.18);
+}
+
+.lux-card-img-wrap {
+  position: relative;
+  overflow: hidden;
+  background-color: #f5f2eb;
+  flex-shrink: 0;
+}
+
+.lux-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lux-card:hover .lux-card-img-wrap img {
+  transform: scale(1.05);
+}
+
+/* Half Card Image - Half Card Content Specifics */
+.lux-half-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--stone-border);
+  background: var(--stone-card);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lux-half-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(197, 160, 89, 0.5);
+  box-shadow: 0 16px 36px -12px rgba(28, 25, 23, 0.12), 0 0 20px -5px rgba(197, 160, 89, 0.18);
+}
+
+.lux-half-card .card-media {
+  height: 230px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #ede9df;
+  flex-shrink: 0;
+}
+
+.lux-half-card .card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lux-half-card:hover .card-media img {
+  transform: scale(1.06);
+}
+
+.lux-half-card .card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+/* Equal Height & Equal Spacing Card Foundation */
+.lux-equal-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.grid-equal-cards {
+  display: grid;
+  align-items: stretch !important;
+}
+
+.grid-equal-cards > * {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 5. Navigation Bar */
+.lux-navbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(232, 228, 219, 0.9);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #44403c;
+  padding: 0.5rem 0.65rem;
+  border-radius: 6px;
+  position: relative;
+  white-space: nowrap !important;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-gold-dark);
+}
+
+.nav-link.active {
+  color: #1c1917;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0.65rem;
+  right: 0.65rem;
+  height: 2px;
+  background-color: var(--primary-gold);
+  border-radius: 2px;
+}
+
+/* Nav Control Buttons (RTL & Theme) */
+.nav-control-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid #d6d3d1;
+  background: transparent;
+  color: #44403c;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-control-btn:hover {
+  border-color: var(--primary-gold);
+  color: var(--primary-gold-dark);
+  background: rgba(197, 160, 89, 0.08);
+}
+
+/* 6. Interactive Kelvin Color Temperature Box */
+.kelvin-preview-box {
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  min-height: 280px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.kelvin-glow-effect {
+  position: absolute;
+  inset: 0;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+input[type=range].kelvin-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 6px;
+  background: linear-gradient(to right, #ff8a3d, #ffb86c, #ffe4a0, #fff7ea, #d1e8ff);
+  outline: none;
+}
+
+input[type=range].kelvin-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid var(--charcoal-900);
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease;
+}
+
+input[type=range].kelvin-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+/* 7. Calculator & Service Estimator Components */
+.calc-input-group label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #57534e;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.calc-input-group input, 
+.calc-input-group select,
+.lux-form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d6d3d1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #1c1917;
+  background-color: #ffffff;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.calc-input-group input:focus, 
+.calc-input-group select:focus,
+.lux-form-input:focus {
+  border-color: var(--primary-gold);
+  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.18);
+  outline: none;
+}
+
+/* 8. Slide-Over Quote Drawer & Modals */
+.lux-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lux-drawer.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.lux-drawer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 18, 18, 0.65);
+  backdrop-filter: blur(4px);
+}
+
+.lux-drawer-content {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.25);
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.lux-drawer.active .lux-drawer-content {
+  transform: translateX(0);
+}
+
+/* Modal Dialog */
+.lux-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lux-modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.lux-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(6px);
+}
+
+.lux-modal-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 780px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.35);
+  transform: scale(0.96) translateY(10px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lux-modal.active .lux-modal-content {
+  transform: scale(1) translateY(0);
+}
+
+/* 9. Toast Notification Popups */
+#toast-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 120;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+
+.lux-toast {
+  pointer-events: auto;
+  min-width: 300px;
+  max-width: 420px;
+  background: #1c1917;
+  color: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--primary-gold);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lux-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* 10. Badges & Micro Tags */
+.badge-gold {
+  background: rgba(255, 255, 255, 0.97);
+  color: #6b4f0a;
+  border: 1px solid rgba(197, 160, 89, 0.75);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+
+.badge-stone {
+  background: rgba(255, 255, 255, 0.97);
+  color: #292524;
+  border: 1px solid #d6d3d1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+
+/* 11. FAQ Accordions */
+.faq-item {
+  border-bottom: 1px solid var(--stone-border);
+  transition: background-color 0.2s ease;
+}
+
+.faq-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1c1917;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+  color: var(--primary-gold-dark);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out, padding 0.3s ease;
+  color: #57534e;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.faq-item.active .faq-body {
+  padding-bottom: 1.25rem;
+}
+
+/* ==========================================================================
+   12. DARK THEME STYLING
+   ========================================================================== */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #11100f;
+  color: #f5f4f0;
+}
+
+html.dark .lux-navbar {
+  background: rgba(18, 17, 16, 0.95);
+  border-bottom-color: rgba(50, 46, 41, 0.85);
+}
+
+html.dark .nav-link {
+  color: #d6d3d1;
+}
+
+html.dark .nav-link:hover,
+html.dark .nav-link.active {
+  color: var(--primary-gold-light);
+}
+
+html.dark .lux-card,
+html.dark .lux-half-card {
+  background: #181715;
+  border-color: #2b2823;
+}
+
+html.dark .lux-half-card .card-media,
+html.dark .lux-card-img-wrap {
+  background-color: #1f1d1a;
+}
+
+html.dark .bg-white {
+  background-color: #181715 !important;
+}
+
+html.dark .bg-\[\#faf9f5\] {
+  background-color: #11100f !important;
+}
+
+html.dark .border-stone-200 {
+  border-color: #2b2823 !important;
+}
+
+html.dark .border-stone-100 {
+  border-color: #24221e !important;
+}
+
+html.dark .text-stone-900 {
+  color: #f7f6f2 !important;
+}
+
+html.dark .text-stone-800 {
+  color: #e5e3dc !important;
+}
+
+html.dark .text-stone-700 {
+  color: #d6d3cb !important;
+}
+
+html.dark .text-stone-600 {
+  color: #aba497 !important;
+}
+
+html.dark .text-stone-500 {
+  color: #8f887b !important;
+}
+
+html.dark .bg-stone-50 {
+  background-color: #141311 !important;
+}
+
+html.dark .bg-stone-100 {
+  background-color: #211f1c !important;
+}
+
+html.dark .calc-input-group input, 
+html.dark .calc-input-group select,
+html.dark .lux-form-input {
+  background-color: #161513;
+  border-color: #3b3734;
+  color: #f5f4f0;
+}
+
+html.dark .calc-input-group input:focus, 
+html.dark .calc-input-group select:focus,
+html.dark .lux-form-input:focus {
+  border-color: var(--primary-gold);
+}
+
+html.dark .nav-control-btn {
+  border-color: #3f3b35;
+  color: #d6d3d1;
+}
+
+html.dark .nav-control-btn:hover {
+  border-color: var(--primary-gold);
+  color: var(--primary-gold-light);
+  background: rgba(197, 160, 89, 0.15);
+}
+
+html.dark .lux-drawer-content,
+html.dark .lux-modal-content {
+  background: #181715;
+  color: #f5f4f0;
+}
+
+html.dark .badge-stone {
+  background: rgba(24, 23, 21, 0.97);
+  color: #f5f4f0;
+  border-color: #57534e;
+}
+
+html.dark .badge-gold {
+  background: rgba(24, 23, 21, 0.97);
+  color: #f3d991;
+  border-color: #a3823d;
+}
+
+html.dark .faq-header {
+  color: #f5f4f0;
+}
+
+html.dark .faq-body {
+  color: #aba497;
+}
+
+/* ==========================================================================
+   13. RTL (RIGHT-TO-LEFT) SUPPORT
+   ========================================================================== */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+[dir="rtl"] .text-center {
+  text-align: center !important;
+}
+
+[dir="rtl"] .page-hero-unified,
+[dir="rtl"] .page-hero-content,
+[dir="rtl"] .page-hero-title,
+[dir="rtl"] .page-hero-desc {
+  text-align: center !important;
+}
+
+[dir="rtl"] .lux-drawer-content {
+  left: 0;
+  right: auto;
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] .lux-drawer.active .lux-drawer-content {
+  transform: translateX(0);
+}
+
+[dir="rtl"] #toast-container {
+  left: 1.5rem;
+  right: auto;
+}
+
+[dir="rtl"] .lux-toast {
+  border-left: none;
+  border-right: 4px solid var(--primary-gold);
+}
+
+[dir="rtl"] .fa-arrow-right::before {
+  content: "\f060"; /* Flips to fa-arrow-left in RTL mode */
+}
+
+[dir="rtl"] .fa-chevron-right::before {
+  content: "\f053"; /* Flips to fa-chevron-left in RTL mode */
+}
+
+/* 14. Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1ede4;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9c4b8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b5ad9e;
+}
