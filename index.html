@@ -117,7 +117,7 @@
         <a href="contact.html" class="nav-link">Contact</a>
 
         <!-- RTL Button & Theme Toggle Button right after Contact -->
-        <div class="flex items-center gap-2 ml-2 pl-2 border-l border-stone-300 dark:border-stone-700">
+        <div class="flex items-center gap-2 ml-2 pl-2">
           <button class="rtl-toggle-btn nav-control-btn" title="Toggle RTL / LTR Layout">
             <i class="fa-solid fa-right-left text-[11px]"></i>
             <span class="rtl-btn-text">RTL</span>
@@ -125,21 +125,20 @@
           <button class="theme-toggle-btn nav-control-btn w-9 h-9 !p-0" title="Toggle Light / Dark Theme">
             <i class="fa-solid fa-moon text-xs"></i>
           </button>
+          <button class="quote-drawer-trigger nav-control-btn relative w-9 h-9 !p-0" title="View Quotation Request" aria-label="View Quotation Request">
+            <i class="fa-solid fa-file-invoice text-xs"></i>
+            <span class="quote-count-badge absolute -top-1 -right-1 bg-amber-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center hidden">0</span>
+          </button>
         </div>
       </nav>
 
       <!-- Action Utilities with Proper Spacing -->
       <div class="flex items-center gap-3 shrink-0">
         <!-- Quotation Drawer Trigger -->
-        <button class="quote-drawer-trigger relative w-10 h-10 rounded-full border border-stone-200 dark:border-stone-700 hover:border-amber-400 text-stone-700 dark:text-stone-200 hover:text-amber-700 flex items-center justify-center transition" title="View Quotation Request" aria-label="View Quotation Request">
+        <button class="quote-drawer-trigger xl:hidden relative w-10 h-10 rounded-full border border-stone-200 dark:border-stone-700 hover:border-amber-400 text-stone-700 dark:text-stone-200 hover:text-amber-700 flex items-center justify-center transition" title="View Quotation Request" aria-label="View Quotation Request">
           <i class="fa-solid fa-file-invoice text-sm"></i>
           <span class="quote-count-badge absolute -top-1 -right-1 bg-amber-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center hidden">0</span>
         </button>
-
-        <!-- CTA: Book Showroom -->
-        <a href="contact.html" class="hidden sm:inline-flex gold-glow-btn text-xs uppercase tracking-wider font-semibold py-2.5 px-4 rounded-lg items-center gap-2">
-          <i class="fa-solid fa-calendar-check"></i> Book Showroom
-        </a>
 
         <!-- Mobile Hamburger -->
         <button id="mobile-menu-toggle" class="xl:hidden w-10 h-10 rounded-lg border border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-200 flex items-center justify-center" aria-label="Toggle Navigation">
@@ -285,7 +284,7 @@
             <div class="p-5">
               <span class="text-xs text-amber-600 dark:text-amber-400 font-medium">Grand Foyer • Crystal</span>
               <h3 class="font-serif text-lg font-medium text-stone-900 dark:text-stone-100 group-hover:text-amber-800 dark:group-hover:text-amber-400 transition mb-1">
-                Aurelia Cascade Grand Chandelier
+                Aurelia Grand Chandelier
               </h3>
               <p class="text-xs text-stone-500 dark:text-stone-400 line-clamp-2 mb-3">Cascading hand-cut crystal drops set in rich polished brass framework.</p>
               <div class="text-[11px] text-stone-400 bg-stone-50 dark:bg-stone-800/60 px-2 py-1 rounded border border-stone-100 dark:border-stone-800">
@@ -363,7 +362,7 @@
             <div class="p-5">
               <span class="text-xs text-amber-600 dark:text-amber-400 font-medium">Living Room • Modern</span>
               <h3 class="font-serif text-lg font-medium text-stone-900 dark:text-stone-100 group-hover:text-amber-800 dark:group-hover:text-amber-400 transition mb-1">
-                Celestia Sculptural Halo Chandelier
+                Celestia Halo Chandelier
               </h3>
               <p class="text-xs text-stone-500 dark:text-stone-400 line-clamp-2 mb-3">Concentric floating rings of champagne gold and micro-diffusers.</p>
               <div class="text-[11px] text-stone-400 bg-stone-50 dark:bg-stone-800/60 px-2 py-1 rounded border border-stone-100 dark:border-stone-800">
@@ -456,7 +455,7 @@
             <div>
               <span class="text-xs font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-400 block mb-1">Tailor-Made Scaling</span>
               <h3 class="font-serif text-2xl font-medium text-stone-900 dark:text-stone-100 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition mb-2">Custom Chandelier Design</h3>
-              <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed mb-6">Commission a one-of-a-kind statement piece with tailor-made proportions, Murano hand-blown glass drops, and bespoke brass finishes.</p>
+              <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed mb-6">Commission a one-of-a-kind statement piece with tailor-made proportions, Murano hand-blown glass drops, heavy lights  and bespoke brass finishes.</p>
             </div>
             <a href="services.html#custom-design" class="text-xs uppercase tracking-widest font-semibold text-amber-700 dark:text-amber-400 hover:text-amber-900 flex items-center gap-2 pt-3 border-t border-stone-100 dark:border-stone-800">
               Explore Custom Fabrication <i class="fa-solid fa-arrow-right text-[10px]"></i>

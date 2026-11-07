@@ -259,6 +259,20 @@ function closeQuoteDrawer() {
 
 // 2. Navbar & Mobile Menu
 function initNavbar() {
+  // Sticky header elevation state on scroll
+  const navbar = document.querySelector(".lux-navbar");
+  if (navbar) {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        navbar.classList.add("is-scrolled");
+      } else {
+        navbar.classList.remove("is-scrolled");
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+  }
+
   const mobileBtn = document.getElementById("mobile-menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu-drawer");
   const mobileClose = document.getElementById("mobile-menu-close");
