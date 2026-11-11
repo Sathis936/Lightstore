@@ -414,6 +414,19 @@ footer a[href="index.html"] > div > span.font-serif {
   background: rgba(197, 160, 89, 0.08);
 }
 
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .nav-link {
+    font-size: 0.75rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+  }
+
+  .lux-navbar .nav-control-btn {
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
+  }
+}
+
 /* 6. Interactive Kelvin Color Temperature Box */
 .kelvin-preview-box {
   transition: background-color 0.4s ease, box-shadow 0.4s ease;
