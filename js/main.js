@@ -874,7 +874,7 @@ function initServiceEstimator() {
     if (resultTimeline) resultTimeline.textContent = timeline;
     if (resultDeliverables) {
       resultDeliverables.innerHTML = deliverables.map(d => `
-        <li class="flex items-center gap-2 text-stone-700 dark:text-stone-300 text-xs sm:text-sm">
+        <li class="flex items-center gap-2 text-stone-200 text-xs sm:text-sm">
           <i class="fa-solid fa-circle-check text-amber-600 dark:text-amber-400 text-xs"></i>
           <span>${d}</span>
         </li>
